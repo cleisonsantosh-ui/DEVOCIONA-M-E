@@ -64,18 +64,4 @@ document.getElementById('ck-form').addEventListener('submit', function (e) {
     ir(9);
 });
 
-// Mascara WhatsApp
-var wpp = document.getElementById('ck-wpp');
-if (wpp) {
-    wpp.addEventListener('input', function (e) {
-        var v = e.target.value.replace(/\D/g, '');
-        if (v.length > 6) {
-            v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + '-' + v.slice(7, 11);
-        } else if (v.length > 2) {
-            v = '(' + v.slice(0, 2) + ') ' + v.slice(2);
-        } else if (v.length > 0) {
-            v = '(' + v;
-        }
-        e.target.value = v;
-    });
-}
+

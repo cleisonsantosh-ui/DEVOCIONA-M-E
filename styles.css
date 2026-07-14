@@ -183,17 +183,6 @@ p { color: var(--text-soft); }
     transform: translateY(-1px);
 }
 
-.btn--wa {
-    background: #25D366;
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(37,211,102,.3);
-}
-.btn--wa:hover {
-    background: #1DA851;
-    box-shadow: 0 6px 24px rgba(37,211,102,.4);
-    transform: translateY(-1px);
-}
-
 .btn-arrow {
     width: 20px; height: 20px;
     flex-shrink: 0;
