@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filho Liberto — Roteiro de Oração</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== TELA 0 — ABERTURA ==================== -->
+    <section id="s0" class="screen active" aria-label="Abertura do quiz">
+        <div class="wrap">
+            <div class="glow"></div>
+            <header class="hero">
+                <p class="eyebrow">Um roteiro de oração personalizado</p>
+                <h1>Descubra como orar com <em>direção</em> pela vida do seu filho</h1>
+                <p class="lead">5 perguntas rápidas. Menos de 1 minuto. Ao final, você recebe um roteiro de 21 dias sob medida para a situação do seu filho — e conhece o Devocional Filho Liberto.</p>
+            </header>
+
+            <button class="btn btn--primary btn--xl" onclick="ir(1)">
+                Começar agora
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <p class="trust-line">✦ +4.800 mães já receberam seu roteiro</p>
+        </div>
+    </section>
+
+    <!-- ==================== PERGUNTA 1 ==================== -->
+    <section id="s1" class="screen" aria-label="Pergunta 1 de 5">
+        <div class="wrap">
+            <div class="progress"><div class="bar" style="--w:20%"></div></div>
+            <p class="q-counter">1 de 5</p>
+            <h2>Qual situação mais representa o momento do seu filho(a) hoje?</h2>
+            <div class="opts">
+                <button class="opt" onclick="responder(1,'A')">Está distante da igreja e de Deus</button>
+                <button class="opt" onclick="responder(1,'B')">Envolvido com vícios ou más companhias</button>
+                <button class="opt" onclick="responder(1,'C')">Vive em conflito e rebeldia em casa</button>
+                <button class="opt" onclick="responder(1,'D')">Não sei explicar — só sinto que está longe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PERGUNTA 2 ==================== -->
+    <section id="s2" class="screen" aria-label="Pergunta 2 de 5">
+        <div class="wrap">
+            <div class="progress"><div class="bar" style="--w:40%"></div></div>
+            <p class="q-counter">2 de 5</p>
+            <h2>Há quanto tempo você ora por essa situação?</h2>
+            <div class="opts">
+                <button class="opt" onclick="responder(2,'A')">Menos de 6 meses</button>
+                <button class="opt" onclick="responder(2,'B')">Mais de 1 ano</button>
+                <button class="opt" onclick="responder(2,'C')">Mais de 5 anos</button>
+                <button class="opt" onclick="responder(2,'D')">Nem lembro mais quando começou</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PERGUNTA 3 ==================== -->
+    <section id="s3" class="screen" aria-label="Pergunta 3 de 5">
+        <div class="wrap">
+            <div class="progress"><div class="bar" style="--w:60%"></div></div>
+            <p class="q-counter">3 de 5</p>
+            <h2>Como você descreveria suas orações por ele(a)?</h2>
+            <div class="opts">
+                <button class="opt" onclick="responder(3,'A')">Oro de forma geral, sem saber o que pedir</button>
+                <button class="opt" onclick="responder(3,'B')">Tento ser específica, mas não sei se faço certo</button>
+                <button class="opt" onclick="responder(3,'C')">Já tentei de tudo e sinto que nada muda</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PERGUNTA 4 ==================== -->
+    <section id="s4" class="screen" aria-label="Pergunta 4 de 5">
+        <div class="wrap">
+            <div class="progress"><div class="bar" style="--w:80%"></div></div>
+            <p class="q-counter">4 de 5</p>
+            <h2>O que mais pesa no seu coração agora?</h2>
+            <div class="opts">
+                <button class="opt" onclick="responder(4,'A')">Medo de perder meu filho de vez</button>
+                <button class="opt" onclick="responder(4,'B')">Culpa de não saber orar do jeito certo</button>
+                <button class="opt" onclick="responder(4,'C')">Cansaço de lutar sozinha</button>
+                <button class="opt" onclick="responder(4,'D')">Falta de um caminho claro pra seguir</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PERGUNTA 5 ==================== -->
+    <section id="s5" class="screen" aria-label="Pergunta 5 de 5">
+        <div class="wrap">
+            <div class="progress"><div class="bar" style="--w:100%"></div></div>
+            <p class="q-counter">5 de 5</p>
+            <h2>Você separaria 10 minutos por dia, por 21 dias, para orar de forma direcionada pelo seu filho?</h2>
+            <div class="opts">
+                <button class="opt opt--accent" onclick="responder(5,'A')">Sim, estou pronta pra lutar por ele(a)</button>
+                <button class="opt" onclick="responder(5,'B')">Quero entender melhor antes de decidir</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESSAMENTO ==================== -->
+    <section id="s6" class="screen" aria-label="Processando">
+        <div class="wrap wrap--center">
+            <div class="loader">
+                <div class="loader-ring"></div>
+                <div class="loader-cross">✝</div>
+            </div>
+            <h2 class="loader-text">Montando seu roteiro de oração…</h2>
+            <p class="loader-sub">Um instante enquanto preparamos tudo para você</p>
+        </div>
+    </section>
+
+    <!-- ==================== RESULTADO / OFERTA ==================== -->
+    <section id="s7" class="screen" aria-label="Seu roteiro">
+        <div class="offer">
+
+            <!-- Hero dinâmico -->
+            <div class="offer-hero">
+                <div class="offer-hero-inner">
+                    <div id="dyn-hl"></div>
+                </div>
+            </div>
+
+            <!-- Validação -->
+            <article class="o-section">
+                <div class="o-wrap">
+                    <p class="o-body o-body--lead">Você já orou, já chorou, talvez já tenha tentado confronto, ultimato, jejum — e mesmo assim sente que está lutando no escuro.</p>
+                    <p class="o-body">Isso não é falta de fé. É falta de direção.</p>
+                </div>
+            </article>
+
+            <!-- Mecanismo -->
+            <article class="o-section o-section--warm">
+                <div class="o-wrap">
+                    <span class="o-icon">✦</span>
+                    <h3>A oração genérica não quebra um cativeiro específico</h3>
+                    <p class="o-body">Cada área da vida do seu filho — mente, caráter, amizades, proteção espiritual, futuro — precisa de uma cobertura específica. Como Efésios 6 ensina: cada peça da armadura no lugar certo.</p>
+                </div>
+            </article>
+
+            <!-- Solução -->
+            <article class="o-section">
+                <div class="o-wrap">
+                    <span class="o-icon">🕊</span>
+                    <h3>O Devocional Filho Liberto</h3>
+                    <p class="o-body">Um protocolo guiado de <strong>21 dias de oração direcionada</strong>, um por área específica, entregue diariamente no seu WhatsApp.</p>
+                    <div class="areas">
+                        <div class="area"><span class="area-ic">🧠</span><span>Mente</span></div>
+                        <div class="area"><span class="area-ic">💎</span><span>Caráter</span></div>
+                        <div class="area"><span class="area-ic">👥</span><span>Amizades</span></div>
+                        <div class="area"><span class="area-ic">🔗</span><span>Vínculos</span></div>
+                        <div class="area"><span class="area-ic">🛡</span><span>Proteção</span></div>
+                        <div class="area"><span class="area-ic">🌟</span><span>Futuro</span></div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Prova social -->
+            <article class="o-section o-section--warm">
+                <div class="o-wrap">
+                    <span class="o-icon">💛</span>
+                    <h3>Mais de 4.800 mães já passaram pelo protocolo</h3>
+                    <div class="testis">
+                        <blockquote class="testi">"Meu filho ligou pra mim sem motivo nenhum. Chorei muito."</blockquote>
+                        <blockquote class="testi">"Depois de 7 anos, ele voltou pra casa. Deus é fiel."</blockquote>
+                        <blockquote class="testi">"Ele entrou na igreja sozinho. Não acreditei quando soube."</blockquote>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Stack -->
+            <article class="o-section">
+                <div class="o-wrap">
+                    <h3>O que você recebe:</h3>
+                    <ul class="stack">
+                        <li><span class="stk-ic">✦</span><div><strong>Roteiro dos 21 dias</strong><small>Uma área por dia, com oração guiada</small></div></li>
+                        <li><span class="stk-ic">✦</span><div><strong>Áudio guiado de oração</strong><small>Para os dias mais difíceis</small></div></li>
+                        <li><span class="stk-ic">✦</span><div><strong>Mapa das portas espirituais</strong><small>Checklist para identificar por onde orar primeiro</small></div></li>
+
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Preço -->
+            <article class="o-section o-price">
+                <div class="o-wrap o-wrap--center">
+                    <p class="o-price-note">Menos que o valor de um lanche por dia</p>
+                    <div class="o-price-row">
+                        <span class="o-old">R$ 47,00</span>
+                        <span class="o-cur">R$ 24,99</span>
+                    </div>
+                    <p class="o-price-note">para ter direção em algo que você já ora todos os dias</p>
+                </div>
+            </article>
+
+            <!-- Garantia -->
+            <article class="o-section o-section--warm">
+                <div class="o-wrap o-wrap--center">
+                    <span class="o-icon">🛡</span>
+                    <h3>Garantia de 7 dias</h3>
+                    <p class="o-body">Se nos primeiros 7 dias sentir que não é para você, devolvemos os R$ 24,99 sem perguntas.</p>
+                    <p class="o-body o-body--small">Se seguir os 21 dias completos e não sentir mais paz e clareza, devolvemos em dobro.</p>
+                </div>
+            </article>
+
+            <!-- CTA -->
+            <div class="o-cta">
+                <button class="btn btn--primary btn--xl" onclick="ir(8)">
+                    Quero começar meu roteiro de 21 dias
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== CHECKOUT ==================== -->
+    <section id="s8" class="screen" aria-label="Checkout">
+        <div class="wrap">
+            <h2>Finalizar Pedido</h2>
+
+            <div class="ck-summary">
+                <h3>Devocional Filho Liberto</h3>
+                <ul>
+                    <li>Roteiro dos 21 dias</li>
+                    <li>Áudio guiado de oração</li>
+                    <li>Mapa das portas espirituais</li>
+                    <li>Acesso à comunidade</li>
+                </ul>
+                <div class="ck-total"><span>Total</span><strong>R$ 24,99</strong></div>
+            </div>
+
+            <form id="ck-form" autocomplete="on">
+                <div class="field">
+                    <label for="ck-name">Nome completo</label>
+                    <input type="text" id="ck-name" name="name" required autocomplete="name">
+                </div>
+                <div class="field">
+                    <label for="ck-wpp">WhatsApp</label>
+                    <input type="tel" id="ck-wpp" name="whatsapp" placeholder="(00) 00000-0000" required autocomplete="tel">
+                </div>
+                <div class="field">
+                    <label for="ck-email">E-mail</label>
+                    <input type="email" id="ck-email" name="email" required autocomplete="email">
+                </div>
+
+                <fieldset class="pay">
+                    <legend>Forma de pagamento</legend>
+                    <label class="pay-opt">
+                        <input type="radio" name="pay" value="pix" checked>
+                        <span class="pay-box"><strong>PIX</strong><small>5% off</small></span>
+                    </label>
+                    <label class="pay-opt">
+                        <input type="radio" name="pay" value="card">
+                        <span class="pay-box"><strong>Cartão</strong><small>até 3x</small></span>
+                    </label>
+                </fieldset>
+
+                <div class="ck-seal">🛡 Garantia incondicional de 7 dias</div>
+                <div class="ck-testi">"Em 21 dias minha vida mudou. Meu filho voltou pra casa." — Márcia</div>
+
+                <button type="submit" class="btn btn--primary btn--xl">Confirmar e começar minha jornada</button>
+                <p class="ck-sec">🔒 Compra segura · 🛡 Dados protegidos · ⚡ Acesso imediato</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==================== CONFIRMAÇÃO ==================== -->
+    <section id="s9" class="screen" aria-label="Pagamento confirmado">
+        <div class="wrap wrap--center">
+            <div class="confirm-glow"></div>
+            <div class="confirm-cross">✝</div>
+            <h1>Pagamento confirmado</h1>
+            <p class="lead">Que alegria ter você aqui. A partir de hoje você não está mais orando sozinha — você entrou para a comunidade de Mães da Oração.</p>
+            <div class="confirm-box">
+                <p><strong>Amanhã de manhã</strong> você recebe o <strong>Dia 1</strong> do seu roteiro de 21 dias.</p>
+                <p>Enquanto isso, respira: você deu o primeiro passo concreto para lutar pela vida do seu filho.</p>
+            </div>
+            <button class="btn btn--wa btn--xl" onclick="window.open('https://chat.whatsapp.com/SEU_GRUPO','_blank')">
+                Entrar no grupo do WhatsApp
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
