@@ -648,3 +648,91 @@ p { color: var(--text-soft); }
     .o-section { padding: var(--sp-lg); }
     #dyn-hl h2 { font-size: 2rem; }
 }
+
+/* =================================================================
+   FOOTER LEGAL
+   ================================================================= */
+.site-footer {
+    width: 100%;
+    background: var(--burgundy-dk);
+    color: rgba(255,255,255,.7);
+    padding: var(--sp-lg) var(--sp-md);
+    text-align: center;
+    font-size: .82rem;
+    line-height: 1.7;
+    margin-top: auto;
+}
+.footer-inner {
+    max-width: 520px;
+    margin: 0 auto;
+}
+.footer-brand {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: .95rem;
+    color: var(--gold-light);
+    margin-bottom: var(--sp-sm);
+}
+.footer-business {
+    margin-bottom: var(--sp-sm);
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--sp-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--sp-sm);
+}
+.footer-links a {
+    color: var(--gold-light);
+    text-decoration: none;
+    transition: color .2s;
+}
+.footer-links a:hover {
+    color: #fff;
+}
+.footer-copy {
+    color: rgba(255,255,255,.4);
+    font-size: .75rem;
+}
+
+/* --- Policy pages --- */
+.policy-page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: var(--sp-lg) var(--sp-md) var(--sp-xl);
+}
+.policy-page h1 {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    color: var(--burgundy);
+    margin-bottom: var(--sp-md);
+}
+.policy-page h2 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--burgundy);
+    margin: var(--sp-md) 0 var(--sp-xs);
+}
+.policy-page p,
+.policy-page li {
+    font-size: .92rem;
+    line-height: 1.75;
+    color: var(--text-soft);
+    margin-bottom: var(--sp-xs);
+}
+.policy-page ul {
+    padding-left: var(--sp-md);
+    margin-bottom: var(--sp-xs);
+}
+.policy-page a {
+    color: var(--burgundy);
+}
+.policy-page .policy-back {
+    display: inline-block;
+    margin-top: var(--sp-md);
+    color: var(--burgundy);
+    text-decoration: none;
+    font-weight: 600;
+}
+.policy-page .policy-back:hover { text-decoration: underline; }
