@@ -148,6 +148,11 @@ p { color: var(--text-soft); }
     color: var(--gold);
     letter-spacing: .02em;
 }
+.legal-line {
+    margin-top: var(--sp-xs);
+    font-size: .72rem;
+    color: var(--text-muted);
+}
 
 /* --- Botões --- */
 .btn {
